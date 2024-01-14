@@ -1,0 +1,8 @@
+{
+  "name": "Emerald",
+  "isDark": true,
+  "displayColors": [
+    "from-green-500",
+    "to-emerald-900"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Amethyst",
+  "isDark": true,
+  "displayColors": [
+    "from-purple-500",
+    "to-purple-800"
+  ]
+}

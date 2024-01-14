@@ -1,0 +1,18 @@
+.main-bg-from {
+    --tw-gradient-from: #a855f7 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.main-bg-via {
+    --tw-gradient-to: rgb(88 28 135 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #581c87 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.main-bg-to {
+    --tw-gradient-to: #6a329f var(--tw-gradient-to-position);
+}
+
+.main-text-highlight {
+    color: rgb(192 132 252 / var(--tw-text-opacity));
+}
