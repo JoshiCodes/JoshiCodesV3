@@ -24,7 +24,7 @@ export default function TypeWriter() {
         if(target) {
             target.innerHTML = " ";
             let i = 0;
-            let speed = 50;
+            let speed = 75;
             const typeWriter = () => {
                 if(!txt) return;
                 if (i < txt.length) {
@@ -33,7 +33,7 @@ export default function TypeWriter() {
                     setTimeout(typeWriter, speed);
                 } else {
                     // End of text
-                    // Wait 2 seconds
+                    // Wait 2.5 seconds
                     // and Remove text (with typewriter effect)
                     let j = txt.length;
                     const removeText = () => {
@@ -46,7 +46,7 @@ export default function TypeWriter() {
                             setIndex(index + 1);
                         }
                     }
-                    setTimeout(removeText, 2000);
+                    setTimeout(removeText, 2500);
                 }
             }
             typeWriter();

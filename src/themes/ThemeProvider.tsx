@@ -21,7 +21,8 @@ export function refreshTheme(theme: string) {
             if(oldLink) {
                 oldLink.remove();
             }
-            const cssLink = data.cssLink; // HOST/static/themes/THEME.css
+            //const cssLink = data.cssLink; // HOST/static/themes/THEME.css
+            const cssLink = "/static/themes/" + theme.toLowerCase() + "/style.css"; // HOST/static/themes/THEME.css
             // Inject CSS
             const link = document.createElement("link");
             link.rel = "stylesheet";
