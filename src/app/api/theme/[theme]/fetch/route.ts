@@ -21,7 +21,6 @@ export async function GET(request: NextRequest, { params } : { params: { theme: 
     const newName = themeJson.name;
     const cssLink = request.nextUrl.protocol + "//" + request.nextUrl.host + "/static/themes/" + newName.toLowerCase() + "/style.css";
 
-
     return Response.json(
         {
             valid: true,

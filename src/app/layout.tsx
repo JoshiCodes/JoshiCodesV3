@@ -3,6 +3,7 @@ import {Inter} from 'next/font/google'
 import './globals.css'
 import React from "react";
 import {ThemeProvider} from "@/themes/ThemeProvider";
+import Footer from '@/components/Footer';
 
 const inter = Inter({subsets: ['latin']})
 
@@ -18,11 +19,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <ThemeProvider/>
+            <ThemeProvider />
             <body className={inter.className}>
                 {children}
                 <footer>
-                    { /* TODO */}
+                    <Footer />
                 </footer>
             </body>
         </html>

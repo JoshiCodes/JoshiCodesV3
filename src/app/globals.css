@@ -70,7 +70,7 @@ body {
 }
 
 #navbar-links {
-    @apply flex flex-row items-center justify-end;
+    @apply flex flex-row content-center items-center justify-end;
 }
 
 #navbar-links a {
