@@ -7,6 +7,7 @@
 }
 
 * {
+    @apply font-mono;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -62,6 +63,29 @@ body {
     animation: 1s pointer infinite;
 }
 
+section {
+    @apply mb-4 md:mb-8;
+}
+
+/*
+    * Form
+ */
+.form-container {
+    @apply flex flex-col items-center justify-center py-2;
+}
+
+.form-container label {
+    @apply text-lg text-gray-200;
+}
+
+.form-container input {
+    @apply bg-zinc-900 rounded text-gray-300 focus:text-gray-200 p-2 focus:bg-zinc-900 ring-0 focus:ring-0;
+}
+
+.form-container textarea {
+    @apply bg-zinc-900 rounded text-gray-300 focus:text-gray-200 p-2 focus:bg-zinc-900 ring-0 focus:ring-0;
+}
+
 /*
  * Navbar
  */
@@ -76,6 +100,7 @@ body {
 #navbar-links a {
     @apply text-gray-300 hover:text-emerald-400;
 }
+
 
 /*
  * Animations
@@ -95,5 +120,22 @@ body {
     }
     100% {
         opacity: 100%;
+    }
+}
+
+.animate-hop {
+    animation: hop 1s infinite;
+}
+
+@keyframes hop {
+    /* double bounce with physics */
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
