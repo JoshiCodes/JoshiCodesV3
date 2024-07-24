@@ -27,6 +27,23 @@ export default function ThemeSwitcher() {
         });
     }, []);
 
+    // add event listener to mouse click
+    useEffect(() => {
+        const handleClick = (e: MouseEvent) => {
+            if(!document.getElementById("navbar-theme-switcher-list")) return;
+            if(!document.getElementById("navbar-theme-switcher")) return;
+            if(!document.getElementById("navbar-theme-switcher")?.contains(e.target as Node)) {
+                if(!document.getElementById("navbar-theme-switcher-list")?.contains(e.target as Node)) {
+                    setThemeSwitcherOpen(false);
+                }
+            }
+        }
+        document.addEventListener("click", handleClick);
+        return () => {
+            document.removeEventListener("click", handleClick);
+        }
+    }, []);
+
     function selectTheme(themeName: string) {
         return () => {
             fetch("/api/theme/" + themeName + "/fetch").then(res => res.json()).then(theme => {
@@ -38,6 +55,8 @@ export default function ThemeSwitcher() {
                     localStorage.setItem("theme", themeName);
                     refreshTheme(themeName);
                 }
+                // close the theme switcher
+                setThemeSwitcherOpen(false);
             });
         }
     }
@@ -49,7 +68,7 @@ export default function ThemeSwitcher() {
                     {currentTheme !== null ? <ThemePreview {...currentTheme} /> : null}
                 </button>
                 <div id={"navbar-theme-switcher-list"}
-                     className={"absolute top-0 left-0 bg-zinc-900 rounded-lg p-2 mt-10 " + (themeSwitcherOpen ? "block" : "hidden")}>
+                     className={"absolute top-10 right-0 bg-zinc-900 rounded-lg p-2 mt-10 " + (themeSwitcherOpen ? "block" : "hidden")}>
                     {
                         themes.map((theme, index) => {
                             return <>
