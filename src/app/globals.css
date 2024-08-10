@@ -64,7 +64,7 @@ body {
 }
 
 section {
-    @apply mb-4 md:mb-8;
+    @apply mb-6 md:mb-8;
 }
 
 /*
@@ -102,7 +102,7 @@ textarea:disabled {
 }
 
 #navbar-links {
-    @apply flex flex-row content-center items-center justify-end;
+    @apply hidden md:flex flex-row content-center items-center justify-end;
 }
 
 #navbar-links a {

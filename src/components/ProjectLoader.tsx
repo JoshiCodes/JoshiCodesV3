@@ -35,7 +35,7 @@ export default function ProjectLoader() {
     });
     return (
         <>
-            <div className={"grid justify-center content-center items-center grid-cols-3 gap-y-4 md:gap-y-8 mx-5 md:m-12"}>
+            <div className={"mt-2 grid justify-center content-center items-center md:grid-cols-3 gap-y-4 md:gap-y-8 mx-5 md:m-12"}>
                 {projects}
             </div>
         </>

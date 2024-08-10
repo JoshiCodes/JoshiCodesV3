@@ -12,7 +12,7 @@ export default function Navbar() {
                 <Link href={"/"} className={"text-3xl text-white font-bold"} key={"title"}>JoshiCodes.de</Link>
                 <div className={"flex flex-row h-full justify-center gap-x-4"}>
                     <ThemeSwitcher />
-                    <div id={"navbar-links"} key={87878}>
+                    <div id={"navbar-links"}>
                         <a>Kontakt</a>
                     </div>
                 </div>

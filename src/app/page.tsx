@@ -12,10 +12,12 @@ export default function Home() {
             <Navbar />
             <div className={"w-full h-screen flex justify-center content-center items-center"}>
                 <div className={"-mt-4 lg:-mt-12 flex flex-col"}>
-                    <div className={"flex flex-col sm:flex-row gap-x-4 text-6xl font-semibold text-white z-2"}>
-                        <span>Hey, Ich bin</span> <span className={"main-text-highlight font-semibold"}>Joshua</span>
+                    <div
+                        className={"flex flex-col sm:flex-row gap-x-4 text-6xl font-semibold text-white z-2 text-center"}>
+                        <span>Hey! Ich bin </span>
+                        <span className={"main-text-highlight font-semibold"}>Joshua</span>
                     </div>
-                    <div id={"text-desc-container"} className={"mt-1"}>
+                    <div id={"text-desc-container"} className={"mt-1 mx-auto"}>
                         <TypeWriter/>
                     </div>
                 </div>
@@ -31,7 +33,7 @@ export default function Home() {
                 <h2 className={"text-gray-50 font-semibold font-mono text-center text-4xl md:text-5xl"}>
                     Kontakt
                 </h2>
-                <div>
+                <div className={"mt-2 mx-2 md:mx-0"}>
                     <p className={"text-center font-mono text-gray-200"}>
                         Bei Fragen oder Anregungen, schreiben Sie mir <br/>
                         gerne eine Nachricht über das hier <br/>
@@ -39,7 +41,7 @@ export default function Home() {
                         oder via E-Mail an <a href={"mailto:joshua@joshicodes.de"}
                                               className={"main-text-highlight"}>joshua@joshicodes.de</a>.
                     </p>
-                    <form className={"mt-4 md:mt-8"}>
+                    <form className={"mt-4 md:mt-5"}>
                         {
                             /**
                              * <h4 className={"text-gray-100 font-semibold font-mono text-2xl text-center"}>
@@ -64,7 +66,7 @@ export default function Home() {
                                           disabled={true}/>
                             </div>
                         </div>
-                        <p className={"text-center text-red-500"}>
+                        <p className={"text-center text-red-500 mx-2 md:mx-0"}>
                             Diese Funktion ist derzeit deaktiviert. <br />
                             Bitte schreiben Sie bei Interesse eine E-Mail.
                         </p>

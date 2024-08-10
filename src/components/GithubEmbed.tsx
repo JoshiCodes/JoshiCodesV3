@@ -6,7 +6,7 @@ export default function GithubEmbed(props: { repo: string, format: string }) {
     return (
         <>
             <a href={"https://github.com/" + repo} target={"_blank"}>
-                <img src={url} alt={repo} className={"h-72 rounded-lg transform transition-all duration-300 hover:scale-110"}/>
+                <img src={url} alt={repo} className={"h-42 md:h-72 rounded-lg transform transition-all duration-300 hover:scale-110"}/>
             </a>
         </>
     )
