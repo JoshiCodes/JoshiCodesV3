@@ -17,7 +17,7 @@ export async function GET(request: NextRequest, { params } : { params: { theme: 
     }
 
     const newName = themeJson.name;
-    const host = process.env.HOST || "http://localhost:3000";
+    const host = request.headers.get("host") || "http://localhost:3001";
     const cssLink = host + "/static/themes/" + newName.toLowerCase() + "/style.css";
 
     return Response.json(
