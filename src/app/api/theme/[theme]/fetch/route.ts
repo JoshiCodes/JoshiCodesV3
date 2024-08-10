@@ -17,7 +17,8 @@ export async function GET(request: NextRequest, { params } : { params: { theme: 
     }
 
     const newName = themeJson.name;
-    const host = request.headers.get("host") || "http://localhost:3001";
+    const protocol = request.headers.get("x-forwarded-proto") || request.nextUrl.protocol || "http";
+    const host = protocol + "://" + (request.headers.get("host") || "http://localhost:3001");
     const cssLink = host + "/static/themes/" + newName.toLowerCase() + "/style.css";
 
     return Response.json(
