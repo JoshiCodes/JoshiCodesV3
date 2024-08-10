@@ -12,13 +12,13 @@ export default function ThemeSwitcher() {
 
     useEffect(() => {
         const currentThemeName = typeof localStorage !== "undefined" ? (localStorage.getItem("theme") || "default") : "default";
-        fetch("/api/theme/" + currentThemeName + "/fetch").then(res=> {console.log(res); return res;}).then(res => res.json()).then(theme => {
+        fetch("/api/theme/" + currentThemeName + "/fetch").then(res => res.json()).then(theme => {
             if(!theme) return;
             if(!theme.valid) return;
             if(!theme.theme) return;
             setCurrentTheme(theme.theme);
         });
-        fetch("/api/theme/themes/").then(res=> {console.log(res); return res;}).then(res => res.json()).then(themes => {
+        fetch("/api/theme/themes/").then(res => res.json()).then(themes => {
             if(!themes) return;
             if(!themes.valid) return;
             if(!themes.themes) return;
@@ -46,7 +46,7 @@ export default function ThemeSwitcher() {
 
     function selectTheme(themeName: string) {
         return () => {
-            fetch("/api/theme/" + themeName + "/fetch").then(res=> {console.log(res); return res;}).then(res => res.json()).then(theme => {
+            fetch("/api/theme/" + themeName + "/fetch").then(res => res.json()).then(theme => {
                 if(!theme) return;
                 if(!theme.valid) return;
                 if(!theme.theme) return;
@@ -65,15 +65,15 @@ export default function ThemeSwitcher() {
         <>
             <div id={"navbar-theme-switcher"} className={"mr-2"}>
                 <button onClick={() => setThemeSwitcherOpen(!themeSwitcherOpen)}>
-                    {currentTheme !== null ? <ThemePreview {...currentTheme} /> : null}
+                    {currentTheme !== null ? <ThemePreview {...currentTheme} key={"current_theme"} /> : null}
                 </button>
                 <div id={"navbar-theme-switcher-list"}
                      className={"absolute top-10 right-0 bg-zinc-900 rounded-lg p-2 mt-10 " + (themeSwitcherOpen ? "block" : "hidden")}>
                     {
                         themes.map((theme, index) => {
                             return <>
-                                <button onClick={selectTheme(theme.name)}>
-                                    <ThemePreview {...theme} key={index}/>
+                                <button onClick={selectTheme(theme.name)} key={"theme_" + theme.name}>
+                                    <ThemePreview {...theme} key={"theme_prevw_" + theme.name} />
                                 </button>
                             </>
                         })
@@ -88,8 +88,7 @@ function ThemePreview(theme: Theme) {
     return (
         <>
             <div className={"bg-zinc-950 hover:bg-zinc-800 rounded-xl p-2"}>
-                <div className={"rounded-lg h-10 w-20 bg-gradient-to-tr " + theme.displayColors.join(" ")}>
-                </div>
+                <div className={"rounded-lg h-10 w-20 bg-gradient-to-tr " + theme.displayColors.join(" ")}></div>
             </div>
         </>
     )

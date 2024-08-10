@@ -1,11 +1,11 @@
 "use client"
 
 import GithubEmbed from "@/components/GithubEmbed";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function ProjectLoader() {
     const [projects, setProjects] = useState<JSX.Element[]>([]);
-    useState(() => {
+    useEffect(() => {
         if (typeof window === 'undefined') return;
         const protocol = window.location.protocol;
         const host = window.location.host;
@@ -24,8 +24,10 @@ export default function ProjectLoader() {
                 return json.github_project_embed_format;
             }).then(form => {
                 let githubEmbeds = [];
+                let i = 0;
                 for (const project of projects) {
-                    githubEmbeds.push(<GithubEmbed repo={project} format={form} />);
+                    githubEmbeds.push(<GithubEmbed repo={project} format={form} key={"githb_prjkt_" + i}/>);
+                    i++;
                 }
                 setProjects(githubEmbeds);
             });
