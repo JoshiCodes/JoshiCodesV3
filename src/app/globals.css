@@ -86,6 +86,14 @@ section {
     @apply bg-zinc-900 rounded text-gray-300 focus:text-gray-200 p-2 focus:bg-zinc-900 ring-0 focus:ring-0;
 }
 
+input:disabled {
+    @apply bg-zinc-900 text-gray-300 cursor-not-allowed;
+}
+
+textarea:disabled {
+    @apply bg-zinc-900 text-gray-300 cursor-not-allowed;
+}
+
 /*
  * Navbar
  */

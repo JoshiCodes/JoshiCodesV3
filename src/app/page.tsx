@@ -50,17 +50,24 @@ export default function Home() {
                         <div className={"flex flex-col justify-center content-center items-center"}>
                             <div className={"form-container"}>
                                 <label htmlFor={"name"}>Name</label>
-                                <input type={"text"} id={"name"} name={"name"} placeholder={"Ihr Name"} required/>
+                                <input type={"text"} id={"name"} name={"name"} placeholder={"Ihr Name"} required
+                                       disabled={true}/>
                             </div>
                             <div className={"form-container"}>
                                 <label htmlFor={"email"}>E-Mail</label>
-                                <input type={"email"} id={"email"} name={"email"} placeholder={"Ihre E-Mail"} required/>
+                                <input type={"email"} id={"email"} name={"email"} placeholder={"Ihre E-Mail"} required
+                                       disabled={true}/>
                             </div>
                             <div className={"form-container"}>
                                 <label htmlFor={"message"}>Nachricht</label>
-                                <textarea id={"message"} name={"message"} placeholder={"Ihre Nachricht"} required/>
+                                <textarea id={"message"} name={"message"} placeholder={"Ihre Nachricht"} required
+                                          disabled={true}/>
                             </div>
                         </div>
+                        <p className={"text-center text-red-500"}>
+                            Diese Funktion ist derzeit deaktiviert. <br />
+                            Bitte schreiben Sie bei Interesse eine E-Mail.
+                        </p>
                     </form>
                 </div>
             </section>
