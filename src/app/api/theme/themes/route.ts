@@ -1,5 +1,5 @@
 import {readdirSync} from "node:fs";
-import {fetchTheme} from "@/app/api/theme/[theme]/fetch/route";
+import {fetchTheme} from "@/themes/ThemeProvider";
 
 export async function GET(request: Request) {
     // Get all theme names from the themes folder.
