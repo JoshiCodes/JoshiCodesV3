@@ -12,13 +12,13 @@ export default function ThemeSwitcher() {
 
     useEffect(() => {
         const currentThemeName = typeof localStorage !== "undefined" ? (localStorage.getItem("theme") || "default") : "default";
-        fetch("/api/theme/" + currentThemeName + "/fetch").then(res => res.json()).then(theme => {
+        fetch("/api/theme/" + currentThemeName + "/fetch").then(res=> {console.log(res); return res;}).then(res => res.json()).then(theme => {
             if(!theme) return;
             if(!theme.valid) return;
             if(!theme.theme) return;
             setCurrentTheme(theme.theme);
         });
-        fetch("/api/theme/themes/").then(res => res.json()).then(themes => {
+        fetch("/api/theme/themes/").then(res=> {console.log(res); return res;}).then(res => res.json()).then(themes => {
             if(!themes) return;
             if(!themes.valid) return;
             if(!themes.themes) return;
@@ -46,7 +46,7 @@ export default function ThemeSwitcher() {
 
     function selectTheme(themeName: string) {
         return () => {
-            fetch("/api/theme/" + themeName + "/fetch").then(res => res.json()).then(theme => {
+            fetch("/api/theme/" + themeName + "/fetch").then(res=> {console.log(res); return res;}).then(res => res.json()).then(theme => {
                 if(!theme) return;
                 if(!theme.valid) return;
                 if(!theme.theme) return;
