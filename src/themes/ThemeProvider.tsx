@@ -1,9 +1,7 @@
 "use client";
 
 import {useEffect} from "react";
-import {readdirSync, readFileSync} from "node:fs";
 
-export const DEFAULT_THEME = "emerald";
 
 export function ThemeProvider() {
     useEffect(() => {
