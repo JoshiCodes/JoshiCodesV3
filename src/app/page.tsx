@@ -17,7 +17,7 @@ export default function Home() {
                         <span>Hey! Ich bin </span>
                         <span className={"main-text-highlight font-semibold"}>Joshua</span>
                     </div>
-                    <div id={"text-desc-container"} className={"mt-1 mx-auto"}>
+                    <div id={"text-desc-container"} className={"mt-1"}>
                         <TypeWriter/>
                     </div>
                 </div>
