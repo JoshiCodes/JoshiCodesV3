@@ -67,6 +67,10 @@ section {
     @apply mb-6 md:mb-8;
 }
 
+.link {
+    @apply text-emerald-400 hover:text-emerald-500 cursor-pointer transition-colors duration-200;
+}
+
 /*
     * Form
  */

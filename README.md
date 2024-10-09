@@ -4,3 +4,5 @@
 
 ### This site can be found at [joshicodes.de](https://joshicodes.de).
 
+Feel free to modify and use as your own, as long as you mention me (Just keep the link in the footer).
+

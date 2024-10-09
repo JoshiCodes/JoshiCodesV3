@@ -16,3 +16,11 @@
 .main-text-highlight {
     color: rgb(192 132 252 / var(--tw-text-opacity));
 }
+
+.link {
+    color: #8b5cf6;
+}
+
+.link:hover {
+    color: #a855f7;
+}
