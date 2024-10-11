@@ -50,7 +50,7 @@ body {
 }
 
 #text-desc-container {
-    @apply flex flex-row items-center justify-start;
+    @apply flex flex-row items-center justify-center lg:justify-start;
 }
 
 #title-desc {
@@ -64,7 +64,7 @@ body {
 }
 
 section {
-    @apply mb-6 md:mb-8;
+    @apply mb-12 md:mb-8;
 }
 
 .link {
