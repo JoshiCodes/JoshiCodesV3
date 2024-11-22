@@ -29,7 +29,7 @@ export default function Footer() {
                             </li>
                         </ul>
                         <span>
-                            &copy; {new Date().getFullYear()} Made by <a href="https://joshicodes.com" className="link">JoshiCodes</a>
+                            &copy; {new Date().getFullYear()} Made by <a href="https://joshicodes.de" className="link">JoshiCodes</a>
                         </span>
                     </div>
                 </div>
