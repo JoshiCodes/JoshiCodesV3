@@ -32,7 +32,7 @@ export default function ProjectLoader() {
                 setProjects(githubEmbeds);
             });
         });
-    });
+    }, []);
     return (
         <>
             <div className={"mt-2 grid justify-center content-center items-center md:grid-cols-3 gap-y-4 md:gap-y-8 mx-5 md:m-12"}>
